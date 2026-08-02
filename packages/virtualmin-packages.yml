@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/virtualmin
+note: >-
+  Virtualmin is self-hosted server software, not a hosted SaaS, so it publishes no
+  language client SDKs for its Remote API (callers hit remote.cgi directly over HTTP
+  Basic auth). These are the first-party install scripts, distribution buckets and
+  companion tools published by the Virtualmin GitHub organization.
+packages:
+- language: shell
+  registry: github
+  name: virtualmin-install
+  url: https://github.com/virtualmin/virtualmin-install
+  install: "curl -O https://software.virtualmin.com/gpl/scripts/virtualmin-install.sh && sh virtualmin-install.sh"
+  description: Official shell script to perform a Virtualmin GPL or Professional installation.
+  official: true
+- language: shell
+  registry: github
+  name: cloudmin-install
+  url: https://github.com/virtualmin/cloudmin-install
+  description: Install script for Cloudmin GPL and Professional (VM/cloud management sibling).
+  official: true
+- language: ruby
+  registry: homebrew
+  name: virtualmin/homebrew-tap
+  url: https://github.com/virtualmin/homebrew-tap
+  install: brew tap virtualmin/tap
+  description: Homebrew tap for Virtualmin-related utilities.
+  official: true
+- language: powershell
+  registry: scoop
+  name: virtualmin/scoop-bucket
+  url: https://github.com/virtualmin/scoop-bucket
+  install: scoop bucket add virtualmin https://github.com/virtualmin/scoop-bucket
+  description: Scoop bucket for Virtualmin-related utilities.
+  official: true
+- language: go
+  registry: github
+  name: virtualmin-backup-browser
+  url: https://github.com/virtualmin/virtualmin-backup-browser
+  description: First-party CLI tool to browse Virtualmin backups.
+  official: true

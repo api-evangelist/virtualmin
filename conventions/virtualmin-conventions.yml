@@ -1,0 +1,53 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.virtualmin.com/docs/development/remote-api/
+docs: https://www.virtualmin.com/docs/development/remote-api/
+summary: >-
+  Cross-cutting request/response semantics for the Virtualmin Remote API (remote.cgi).
+  Every call names a command-line program via the `program` parameter and passes that
+  program's options as CGI parameters; the same ~200 programs back the command-line API.
+authentication:
+  style: http-basic
+  detail: HTTP Basic as the Webmin master administrator; see authentication/virtualmin-authentication.yml
+transport:
+  base: https://<host>:10000/virtual-server/remote.cgi
+  methods: [GET, POST]
+  recommended: POST
+  reason: >-
+    POST is recommended so the program name and its parameters (which can include
+    passwords) are not exposed in the URL / server logs.
+request:
+  dispatch_param: program
+  example: /virtual-server/remote.cgi?program=create-alias&domain=domain.com&from=sales&to=user@domain.com
+  parameters: CGI query-string or POST form fields specific to each program
+response:
+  default_format: text
+  formats:
+  - {name: text, how: default, note: plain text plus a trailing exit-status line indicating success or failure}
+  - {name: json, how: json=1}
+  - {name: xml, how: xml=1}
+  - {name: perl, how: perl=1}
+  status_signal: >-
+    Success/failure is conveyed by the exit-status line in the output (mirrors the
+    CLI exit code: 0 success, non-zero failure), in addition to the HTTP status.
+pagination:
+  style: none
+  detail: >-
+    No cursor/offset pagination. Listing programs (list-*) return the full set; add
+    `multiline` to any list-* call for detailed multi-field output per item.
+idempotency:
+  supported: false
+  detail: >-
+    No idempotency-key mechanism is documented. Programs are named by verb
+    (create-*, modify-*, delete-*, enable-*, disable-*); retries are not deduplicated
+    by the API. No Idempotency pointer is wired.
+versioning:
+  style: none-at-request-level
+  detail: >-
+    The Remote API is unversioned at the request level; capability tracks the
+    installed Virtualmin release. See lifecycle/ and changelog/.
+cross_links:
+  authentication: authentication/virtualmin-authentication.yml
+  lifecycle: lifecycle/virtualmin-lifecycle.yml
+  changelog: changelog/virtualmin-changelog.yml
+  cli: cli/virtualmin-cli.yml

@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/virtualmin/virtualmin-gpl/releases
+versioning:
+  scheme: semver-like
+  detail: >-
+    Virtualmin GPL/Pro is released as major.minor.patch (e.g. 8.1.0). The Remote API
+    is unversioned at the request level; available programs track the installed release.
+  current: 8.1.0
+  releases: https://github.com/virtualmin/virtualmin-gpl/releases
+deprecation:
+  policy_url: null
+  sunset_header: false
+  detail: No formal published API deprecation policy or RFC 8594 Sunset/Deprecation header support was found.
+sla:
+  url: null
+  detail: Self-hosted software; uptime is the operator's responsibility, so no vendor SLA applies.
+status_page: null
+status_page_detail: >-
+  No vendor status page found. stats.virtualmin.com is a Matomo web-analytics endpoint,
+  not an operational status page. No StatusPage pointer wired.
+deprecated_operations: []

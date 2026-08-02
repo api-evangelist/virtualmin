@@ -1,7 +1,17 @@
 aid: virtualmin
 name: Virtualmin
-description: Virtualmin is a company surfaced as a portfolio company of y-combinator and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Virtualmin is an open-source web hosting control panel for Linux and BSD, built
+  on top of Webmin, that lets administrators and resellers manage websites, virtual
+  servers, DNS, email, FTP, databases, SSL certificates, WordPress and more from a
+  single interface. Distributed as a community GPL edition and a commercial Pro
+  edition, Virtualmin (with its sibling Cloudmin for VM/cloud management) has run
+  for 20+ years and manages over a million domains across 200K+ active users. For
+  automation it exposes a command-line API and an HTTP-based Remote API served from
+  Webmin's remote.cgi on port 10000, covering ~200 documented programs for creating
+  and modifying virtual servers, users, aliases, databases, resellers, plans,
+  templates, SSL certs, backups and cloud storage, with plain-text, JSON, XML or
+  Perl output.
 url: https://raw.githubusercontent.com/api-evangelist/virtualmin/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +19,109 @@ x-backed-by:
 - y-combinator
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Web Hosting
+- Control Panel
+- Server Management
+- Webmin
+- DNS
+- Email
+- Domains
+- Virtual Servers
+- Databases
+- SSL
+- WordPress
+- Open Source
+- Linux
+image: https://www.virtualmin.com/apple-touch-icon.png
+apis:
+- name: Virtualmin Remote API
+  description: >-
+    HTTP-based Remote API served from Webmin's remote.cgi on port 10000. Each call
+    passes a `program` parameter naming one of ~200 command-line programs (create-domain,
+    list-domains, create-user, create-alias, create-database, generate-letsencrypt-cert,
+    backup-domain, etc.) plus that program's parameters as CGI query/POST params.
+    Authentication is HTTP Basic as the Webmin master administrator. Output is plain
+    text with an exit-status line, or JSON (json=1), XML (xml=1) or Perl (perl=1);
+    list-* programs accept multiline for detailed output. The API is self-hosted per
+    Virtualmin installation.
+  humanURL: https://www.virtualmin.com/docs/development/remote-api/
+  baseURL: https://yourserver:10000/virtual-server/remote.cgi
+  tags:
+  - Web Hosting
+  - Server Management
+  - Automation
+  properties:
+  - type: Documentation
+    url: https://www.virtualmin.com/docs/development/remote-api/
+  - type: APIReference
+    url: https://www.virtualmin.com/docs/development/api-programs/
+common:
+- type: DeveloperPortal
+  url: https://www.virtualmin.com/docs/development/
+- type: Documentation
+  url: https://www.virtualmin.com/docs/
+- type: APIReference
+  url: https://www.virtualmin.com/docs/development/remote-api/
+- type: GettingStarted
+  url: https://www.virtualmin.com/docs/getting-started/
+- type: Support
+  url: https://www.virtualmin.com/support/
+- type: Community
+  url: https://forum.virtualmin.com/
+- type: GitHubOrganization
+  url: https://github.com/virtualmin
+- type: Download
+  url: https://www.virtualmin.com/download/
+- type: Pricing
+  url: https://www.virtualmin.com/shop/
+- type: Login
+  url: https://www.virtualmin.com/account/signin/
+- type: TermsOfService
+  url: https://www.virtualmin.com/terms/
+- type: PrivacyPolicy
+  url: https://www.virtualmin.com/privacy/
+- type: Authentication
+  url: authentication/virtualmin-authentication.yml
+- type: Conventions
+  url: conventions/virtualmin-conventions.yml
+- type: CLI
+  url: cli/virtualmin-cli.yml
+- type: Packages
+  url: packages/virtualmin-packages.yml
+- type: MCPServer
+  url: mcp/virtualmin-mcp.yml
+- type: LLMsTxt
+  url: llms/virtualmin-llms.txt
+- type: Lifecycle
+  url: lifecycle/virtualmin-lifecycle.yml
+- type: ChangeLog
+  url: changelog/virtualmin-changelog.yml
+- type: DomainSecurity
+  url: security/virtualmin-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v1

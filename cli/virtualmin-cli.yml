@@ -1,0 +1,52 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.virtualmin.com/docs/development/command-line-api/
+docs: https://www.virtualmin.com/docs/development/command-line-api/
+name: virtualmin
+summary: >-
+  Virtualmin ships a first-party `virtualmin` command-line script that exposes nearly
+  all web-interface functionality from the Unix shell. It must run as root. The same
+  ~200 operations back the HTTP Remote API. A companion Go CLI, virtualmin-backup-browser,
+  browses Virtualmin backups.
+invocation:
+  format: virtualmin <operation> [--flag value ...]
+  example: virtualmin create-domain --domain foo.com --pass secret --features web,dns,mail
+  help:
+  - virtualmin help                 # list all operations
+  - virtualmin help <operation>     # parameters for one operation
+  - virtualmin <operation> --help
+  access: root / system administrator
+  status: exit 0 on success, non-zero on failure
+command_groups:
+- name: Virtual Servers
+  commands: [create-domain, clone-domain, delete-domain, disable-domain, enable-domain, migrate-domain, modify-domain, move-domain, rename-domain, list-domains, validate-domains, enable-feature, disable-feature, modify-dns, modify-web, modify-mail]
+- name: Mail and FTP Users
+  commands: [create-user, delete-user, modify-user, list-users, list-mailbox, create-protected-user, list-available-shells]
+- name: Mail Aliases
+  commands: [create-alias, create-simple-alias, delete-alias, list-aliases, list-simple-aliases]
+- name: Databases
+  commands: [create-database, delete-database, import-database, list-databases, modify-database-hosts, modify-database-user]
+- name: Reseller Accounts
+  commands: [create-reseller, delete-reseller, modify-reseller, list-resellers]
+- name: Web Apps
+  commands: [install-script, delete-script, list-scripts, list-available-scripts]
+- name: SSL Certificates
+  commands: [list-certs, list-certs-expiry, generate-cert, generate-letsencrypt-cert, install-cert, install-service-cert]
+- name: Templates and Plans
+  commands: [create-template, delete-template, get-template, modify-template, list-templates, create-plan, delete-plan, modify-plan, list-plans]
+- name: Backup and Restore
+  commands: [backup-domain, restore-domain, list-scheduled-backups, list-backup-keys, modify-scheduled-backup]
+- name: Cloud Storage
+  commands: [create-s3-bucket, upload-s3-file, list-s3-buckets, list-gcs-buckets, upload-dropbox-file, list-dropbox-files]
+- name: License
+  commands: [license-info, change-license, upgrade-license, downgrade-license]
+- name: Other
+  commands: [change-password, reset-pass, check-config, config-system, restart-server, set-dkim, set-spam, run-api-command, list-server-statuses]
+companion_clis:
+- name: virtualmin-backup-browser
+  language: go
+  url: https://github.com/virtualmin/virtualmin-backup-browser
+  description: CLI tool to browse Virtualmin backups.
+cross_links:
+  remote_api: conventions/virtualmin-conventions.yml
+  authentication: authentication/virtualmin-authentication.yml

@@ -1,0 +1,59 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: https://www.virtualmin.com/docs/development/api-programs/
+note: >-
+  No official/hosted Virtualmin MCP server was found. This is a CANDIDATE tool surface
+  derived from the documented Remote API programs — a starting point for wrapping
+  remote.cgi as MCP tools, not a published server. Each tool maps to a real `program`
+  invoked over HTTP Basic auth against https://<host>:10000/virtual-server/remote.cgi.
+server:
+  name: virtualmin
+  transport: http
+  url: null
+tools:
+- name: list_domains
+  description: List all virtual servers (domains).
+  source_operation: remote.cgi?program=list-domains
+- name: create_domain
+  description: Create a new virtual server.
+  source_operation: remote.cgi?program=create-domain
+- name: delete_domain
+  description: Delete a virtual server.
+  source_operation: remote.cgi?program=delete-domain
+- name: modify_domain
+  description: Modify an existing virtual server.
+  source_operation: remote.cgi?program=modify-domain
+- name: list_users
+  description: List mail/FTP users in a domain.
+  source_operation: remote.cgi?program=list-users
+- name: create_user
+  description: Create a mail/FTP user in a domain.
+  source_operation: remote.cgi?program=create-user
+- name: create_alias
+  description: Create a mail alias.
+  source_operation: remote.cgi?program=create-alias
+- name: list_databases
+  description: List databases for a domain.
+  source_operation: remote.cgi?program=list-databases
+- name: create_database
+  description: Create a database.
+  source_operation: remote.cgi?program=create-database
+- name: generate_letsencrypt_cert
+  description: Request or renew a Let's Encrypt SSL certificate for a domain.
+  source_operation: remote.cgi?program=generate-letsencrypt-cert
+- name: list_certs_expiry
+  description: List SSL certificates and their expiry.
+  source_operation: remote.cgi?program=list-certs-expiry
+- name: backup_domain
+  description: Back up one or more virtual servers.
+  source_operation: remote.cgi?program=backup-domain
+- name: restore_domain
+  description: Restore a virtual server from backup.
+  source_operation: remote.cgi?program=restore-domain
+- name: list_plans
+  description: List account plans.
+  source_operation: remote.cgi?program=list-plans
+- name: create_reseller
+  description: Create a reseller account.
+  source_operation: remote.cgi?program=create-reseller

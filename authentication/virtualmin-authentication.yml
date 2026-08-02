@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.virtualmin.com/docs/development/remote-api/
+docs: https://www.virtualmin.com/docs/development/remote-api/
+summary:
+  types: [http]
+  http_schemes: [basic]
+  oauth2_flows: []
+  api_key_in: []
+  note: >-
+    The Remote API authenticates over HTTP Basic against Webmin's own user database,
+    the same credentials as the web interface. It is accessible only to the master
+    administrator (typically the Unix `root` account) for security reasons; there is
+    no OAuth, API-key or token scheme. The command-line API instead relies on local
+    Unix root/system access. No OAuth scopes exist, so no scopes/ artifact is produced.
+schemes:
+- name: basicAuth
+  type: http
+  scheme: basic
+  description: >-
+    HTTP Basic authentication as the Webmin master administrator against
+    https://<host>:10000/virtual-server/remote.cgi. Sent as standard Authorization
+    headers (e.g. wget --http-user / --http-passwd, or LWP credentials against the
+    "Webmin Server" realm).
+  sources: [docs/development/remote-api]

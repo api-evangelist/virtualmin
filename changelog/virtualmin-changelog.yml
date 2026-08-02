@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/virtualmin/virtualmin-gpl/releases
+docs: https://github.com/virtualmin/virtualmin-gpl/releases
+scheme: semver-like
+current_version: 8.1.0
+note: >-
+  Virtualmin GPL publishes dated release notes on GitHub for the virtualmin-gpl
+  package (the core Virtual Servers module). Recent window captured from the releases
+  Atom feed; see the source URL for full per-release notes.
+entries:
+- version: 8.1.0
+  date: '2026-02-05'
+- version: 8.0.1
+  date: '2026-01-21'
+- version: 8.0.0
+  date: '2025-12-06'
+- version: 7.50.4
+  date: '2025-12-06'
+- version: 7.50.3
+  date: '2025-12-06'
+- version: 7.50.2
+  date: '2025-12-06'
+- version: 7.50.1
+  date: '2025-10-17'
+- version: 7.50.0
+  date: '2025-09-18'
+- version: 7.40.1
+  date: '2025-09-05'
+- version: 7.40.0
+  date: '2025-09-05'
