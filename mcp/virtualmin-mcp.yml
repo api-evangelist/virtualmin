@@ -2,11 +2,9 @@ generated: '2026-07-21'
 method: derived
 status: candidate
 source: https://www.virtualmin.com/docs/development/api-programs/
-note: >-
-  No official/hosted Virtualmin MCP server was found. This is a CANDIDATE tool surface
-  derived from the documented Remote API programs — a starting point for wrapping
-  remote.cgi as MCP tools, not a published server. Each tool maps to a real `program`
-  invoked over HTTP Basic auth against https://<host>:10000/virtual-server/remote.cgi.
+note: No official/hosted Virtualmin MCP server was found. This is a CANDIDATE tool surface derived from
+  the documented Remote API programs — a starting point for wrapping remote.cgi as MCP tools, not a published
+  server. Each tool maps to a real `program` invoked over HTTP Basic auth against https://<host>:10000/virtual-server/remote.cgi.
 server:
   name: virtualmin
   transport: http
@@ -57,3 +55,9 @@ tools:
 - name: create_reseller
   description: Create a reseller account.
   source_operation: remote.cgi?program=create-reseller
+deployment:
+  mode: none
+  verified: derived
+  tools: 15
+  checked: '2026-08-12'
+  source: catalog MCP census
