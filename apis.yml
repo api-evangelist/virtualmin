@@ -59,7 +59,7 @@ tags:
 - Database
 - SSL
 - WordPress
-- Open-Source
+- Open Source
 - Linux
 tags_raw:
 - Company
@@ -76,6 +76,7 @@ tags_raw:
 - WordPress
 - Open Source
 - Linux
+- Open-Source
 image: https://www.virtualmin.com/apple-touch-icon.png
 apis:
 - name: Virtualmin Remote API
