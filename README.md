@@ -64,6 +64,98 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Virtualmin is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Virtualmin is an open-source web hosting control panel for Linux and BSD, built on top of Webmin, that lets administrators and resellers manage websites, virtual servers, DNS, email, FTP, databases, SSL certificates, WordPress and more from a single interface. Distributed as a community GPL edition and a commercial Pro edition, Virtualmin (with its sibling Cloudmin for VM/cloud management) has run for 20+ years and manages over a million domains across 200K+ active users. For automation it exposes a command-line API and an HTTP-based Remote API served from Webmin's remote.cgi on port 10000, covering ~200 documented programs for creating and modifying virtual servers, users, aliases, databases, resellers, plans, templates, SSL certs, backups and cloud storage, with plain-text, JSON, XML or Perl output.
 
-Backed by: y-combinator
+**Areas:** Company · Web Hosting · Control Panel · Server Management · Webmin · DNS · Email · Domains · Virtual Servers · Database · SSL · WordPress
+
+## Virtualmin on APIs.io
+
+Everything profiled for Virtualmin is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/virtualmin/](https://apis.io/providers/virtualmin/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Virtualmin Remote API](https://apis.io/apis/virtualmin/virtualmin-remote-api/) — HTTP-based Remote API served from Webmin's remote.cgi on port 10000. Each call passes a `program` parameter naming one of ~200 command-line programs…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [virtualmin](https://apis.io/servers/virtualmin/virtualmin/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Virtualmin Authentication](https://apis.io/security/virtualmin/virtualmin-authentication/)
+- [Virtualmin Domain Security](https://apis.io/security/virtualmin/virtualmin-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.virtualmin.com/)
+- [Documentation](https://www.virtualmin.com/docs/)
+- [Getting started](https://www.virtualmin.com/docs/getting-started/)
+- [API reference](https://www.virtualmin.com/docs/development/remote-api/)
+- [Pricing](https://www.virtualmin.com/shop/)
+- [Support](https://www.virtualmin.com/support/)
+- [Terms of service](https://www.virtualmin.com/terms/)
+- [Privacy policy](https://www.virtualmin.com/privacy/)
+- [GitHub](https://github.com/virtualmin)
+
+## API Evangelist rating
+
+**Kin Score 27.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 61.9 |
+| Access clarity | 27.6 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/virtualmin/](https://apis.io/providers/virtualmin/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Virtualmin: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/virtualmin/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
